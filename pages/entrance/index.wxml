@@ -1,0 +1,10 @@
+<!--pages/entrance/index.wxml-->
+<view class="entrance">
+	<block wx:for="{{pages}}" wx:key="name">
+		<button 
+			type="primary" 
+			data-item="{{item}}"
+			bindtap="btnClick"
+		>{{item.name}}</button>
+	</block>
+</view>

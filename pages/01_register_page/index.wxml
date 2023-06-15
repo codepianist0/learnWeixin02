@@ -1,0 +1,23 @@
+<!--pages/01_register_page/index.wxml-->
+<view class="swiper">
+	<swiper autoplay circular indicator-dots>
+		<block wx:for="{{ banners }}" wx:key="acm">
+			<swiper-item>
+				<image src="{{item.image}}" mode="widthFix"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<view class="btns">
+	<button bindtap="btnClick">按钮一</button>
+	<block wx:for="{{colors}}" wx:key="*this">
+		<button 
+			class="btn"
+			style="background: {{item}}"
+			data-item="{{item}}"
+			bindtap="btnColorClick"
+		>
+			{{item}}
+		</button>
+	</block>
+</view>

@@ -1,0 +1,4 @@
+/* pages/01_register_page/index.wxss */
+.btn {
+	color: #fff;
+}
