@@ -1,0 +1,112 @@
+<!--pages/02_commin_cpns/index.wxml-->
+<!-- 6.作业组件 -->
+<page-meta>
+	<navigation-bar class="nav" title="小蟀" loading />
+</page-meta>
+<view>-------------------progress-------------------</view>
+<progress 
+	percent="10"
+	show-info	
+/>
+<icon type="success" color="#ff9854"/>
+
+<view>-------------------swipe组件-------------------</view>
+<swiper 
+	autoplay 
+	indicator-dots
+	circular
+	next-margin="27.5px"
+	previous-margin="27.5px"
+>
+	<block wx:for="{{banners}}" wx:key="acm">
+		<swiper-item>
+			<image src="{{item.image}}" mode="widthFix"/>
+		</swiper-item>
+	</block>
+</swiper>
+
+<!-- 5.input组件 -->
+<view>-----------------input组件------------------</view>
+<input  
+	class="input" 
+	type="text" 
+	model:value="{{message}}"
+	adjust-position
+	bindinput="input"
+/>
+
+<!-- 4.scrollView -->
+<!-- scrollview中,如果需要flex布局,需要属性enable-flex -->
+<view>-------------------scrollView组件-------------------</view>
+<scroll-view 
+	class="scroll-content scroll-y" 
+	scroll-y
+	bindscroll="getScroll"
+	bindscrolltoupper="scorllToupper"
+	bindscrolltolower="scorllTolower"
+>
+	<block wx:for="{{viewColors}}" wx:key="*this">
+		<view class="item" style="background-color: {{item}};"></view>
+	</block>
+</scroll-view>
+
+<!-- 4.image组件 -->
+<view>---------------------image组件---------------------</view>
+<!-- 1.重要属性mode -->
+<!-- <image src="/assets/程璐.jpg" mode="top right"/> -->
+<!-- <image src="/assets/程璐.jpg" mode="bottom right"/> -->
+<!-- <image src="/assets/程璐.jpg" mode="widthFix"/> -->
+<image src="/assets/程璐.jpg" mode="aspectFit" show-menu-by-longpress/>
+<!-- 2.选择本地图片 -->
+<button type="primary" bindtap="selectImageClick">选择图片</button>
+<image src="{{imgPath}}" mode="widthFix"/>
+
+
+<!-- 3.view组件 -->
+<view>----------------------view组件----------------------</view>
+<view hover-class="active" hover-start-time="3000">我是view组件</view>
+<view hover-class="active" hover-stay-time="500" hover-start-time="500">codepianist</view>
+
+<!-- 2.button组件 -->
+<view>---------------------button组件---------------------</view>
+<!-- 基本使用 -->
+<button>按钮</button> <!-- 默认独占一行 -->
+<button size="mini">size属性</button><!-- 设置为mini可以即设置为行内替换类型 -->
+<button size="mini" type="primary">type属性</button>
+<button size="mini" type="warn">type属性</button>
+<button size="mini" class="btn" hover-class="active">自定义属性和hover效果</button>
+<button size="mini" plain>plain属性</button><!-- 是否设置为镂空 -->
+<button size="mini" loading class="btn" hover-class="active">loading属性</button>
+<!-- 获取数据 -->
+<view class="open-type">
+	<button size="mini" open-type="contact" type="primary">打开客服会话</button>
+	<button 
+		size="mini"
+		type="primary"
+		bindgetuserinfo="getUserInfo"
+	>获取用户信息(旧)</button>
+	<button 
+		size="mini" 
+		type="primary" 
+		bindtap="getUserInfo"
+	>
+		用户信息
+	</button>
+	<button 
+		size="mini" 
+		open-type="getPhoneNumber"
+		type="primary" 
+		bindgetphonenumber="getPhoneNumber"
+	>
+		电话号码
+	</button>
+</view>
+
+
+<!-- 1.text组件 -->
+<view>----------------------text组件----------------------</view>
+<text>Hello World</text>
+<text user-select>{{message}}</text><!-- user-select设置用户是否可以选中文本 -->
+<text user-select="{{true}}">{{message}}</text><!-- 当为Boolean类型的时候,可以不写值,默认为true -->
+<text decode>&gt;</text><!-- decode设置是否可以解码 -->
+<text space="nbsp">1231      132132</text>

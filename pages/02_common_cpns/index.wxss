@@ -1,0 +1,24 @@
+/* pages/02_commin_cpns/index.wxss */
+.btn {
+	color: #fff;
+	background-color: skyblue;
+}
+.active {
+	background-color: slateblue;
+}
+.scroll-content {
+	height: 200px;
+	background-color: skyblue;
+}
+.item {
+	width: 100px;
+	height: 100px;
+}
+
+.input {
+	border: 1px solid skyblue;
+}
+
+.err {
+	top: 50%;
+}

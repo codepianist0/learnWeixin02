@@ -25,6 +25,18 @@ Page({
 	},
 	btnColorClick(event) {
 		console.log(event.target.dataset.item);
-	}
+	},
 	// 作用四：其他监听
+	// 下拉更新
+	onPullDownRefresh() {
+		console.log("onpulldownRefresh");
+	},
+	// 触底
+	onReachBottom() {
+		console.log("reachBottom");
+	},
+	// 滚动监听
+	onPageScroll(event) {
+		console.log("event:", event);
+	}
 })

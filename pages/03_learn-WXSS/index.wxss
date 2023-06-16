@@ -1,0 +1,9 @@
+/* pages/03_learn-WXSS/index.wxss */
+.page-view {
+	color: tomato;
+}
+.box {
+	background-color: skyblue;
+	width: 200rpx;
+	height: 200rpx;
+}

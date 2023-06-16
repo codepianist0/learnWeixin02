@@ -1,14 +1,16 @@
 {
-  "pages":[
+	"pages": [
 		"pages/entrance/index",
-		"pages/01_register_page/index"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+		"pages/01_register_page/index",
+		"pages/02_common_cpns/index",
+		"pages/03_learn-WXSS/index"
+	],
+	"window": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "羽鸽",
+		"navigationBarTextStyle": "black"
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
 }

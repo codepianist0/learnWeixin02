@@ -1,0 +1,11 @@
+<!--pages/03_learn-WXSS/index.wxml-->
+<!-- 优先级!import > style > id > class > element -->
+<!-- 1.样式的编写方式 -->
+<!-- 1.1应用全局样式 -->
+<view class="app-view">Hello World</view>
+<!-- 1.2页面中的样式 -->
+<view class="page-view">hello codepianist</view>
+<!-- 1.3行内的样式 -->
+<view style="color: skyblue;">hello weixin</view>
+<!-- 2.rox单位的使用 -->
+<view class="box"></view>

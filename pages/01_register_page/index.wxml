@@ -21,3 +21,8 @@
 		</button>
 	</block>
 </view>
+<view class="list">
+	<block wx:for="{{50}}" wx:key="50">
+		<view>列表数据： {{item}}</view>
+	</block>
+</view>
